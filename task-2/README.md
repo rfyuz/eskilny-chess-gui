@@ -1,6 +1,5 @@
 # DD1337 Week 2
-Author: Viola Söderlund 
-
+Author: Viola Söderlund   
 Modified by: Isak Larsson
 ## Getting started
 
