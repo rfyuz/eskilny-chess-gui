@@ -12,7 +12,7 @@ Modified by: Isak Larsson
 
 ### Prepare for your assigment
 
-Your first assignment is turned in by uploading it to a repository named `<KTH_ID>-task-2` under the `INDAPlus22` organisation. Be careful to get the spelling right.
+Your first assignment is turned in by uploading it to a repository named `<KTH_ID>-task-2` (ex. ``isaklar-task-2``) under the `INDAPlus22` organisation. Be careful to get the spelling right.
 
 The grade to an assigment is left in the form of an issue with "Pass", "Komplettering", or "Fail" in the title. In case of "Komplettering", read the instructions on what to adjust down in the issue description. Leave a comment on the issue upon reupload of the assignment. "Pass" and "Fail" are self explanatory. 
 
@@ -46,7 +46,7 @@ Write your source code in `src`, where the `main` function is located in `src/ma
 
 ### Kattis problems
 
-This week, you're going to learn the basics of Rust by solving easier [Kattis](https://kth.kattis.com) problems. For each problem, create one Rust crate in `<KTH_ID>-task-2`. Include a screenshot of your Kattis submission to prove solution. See `./minimal_scalar_product` for a Kattis solution example.
+This week, you're going to learn the basics of Rust by solving easier [Kattis](https://kth.kattis.com) problems. For each problem, create one Rust crate in your repo. Include a screenshot of your Kattis submission to prove solution. See `./minimal_scalar_product` for a Kattis solution example.
 
 Solve at least two of the following problems:
 - [Summera tal](https://kth.kattis.com/problems/kth.javap.sumsort)
@@ -114,11 +114,11 @@ let limit: usize = 10;
 let mut index_store: HashMap<usize, usize> = HashMap::with_capacity(limit + 1);
 let mut value_store: Vec<HashSet<usize>> = Vec::with_capacity(limit + 1);
         
-for _value in 1..(limit + 1) {
-    index_store.insert(_value, _value - 1);
+for value in 1..(limit + 1) {
+    index_store.insert(value, value - 1);
 
     let mut sequence: HashSet<usize> = HashSet::new();
-    sequence.insert(_value);
+    sequence.insert(value);
 
     value_store.push(sequence);
 }
