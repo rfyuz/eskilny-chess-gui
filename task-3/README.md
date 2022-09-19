@@ -58,7 +58,7 @@ A GUI application could also make use of enumerables such as `Colour` and `Piece
 
 ### Prepare assignment
 
-1) Create a repository named `<KTH_ID>-chess` under the `INDAPlus21` organisation and clone it.
+1) Create a repository named `<KTH_ID>-chess` under the `INDAPlus22` organisation and clone it.
 2) Navigate into your newly created repository and initialise a Rust library crate with the following command.
 ```bash
 cargo init --lib
