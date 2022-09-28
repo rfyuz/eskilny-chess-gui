@@ -2,15 +2,25 @@
 
 ## Chess GUI Project
 
-Congratulation ettan! You are now a proved owner of a killer ass chess engine. It's time to make it fabulous! Your assignment this week is to write a GUI applikation for a chess engine.
+Great job creating your first ever chess-engine! Now that you are a certified backend-developer, it's time to find out how much you'll like (or dislike) being a front-end developer ;) This weeks task is to create a GUI for a chess-engine.
 
-To write a front-end in Rust, we'll use the [Good Game Easily library (GGEZ)](https://ggez.rs/). For help, you're refeered to the [library documentation](https://docs.rs/ggez/0.6.1/ggez/) and to the code repository's [very good examples](https://github.com/ggez/ggez/tree/master/examples).
+To write a front-end in Rust, we'll use the [Good Game Easily library (GGEZ)](https://ggez.rs/). For help, you're referred to the [library documentation](https://docs.rs/ggez/0.6.1/ggez/) and to the code repository's [very good examples](https://github.com/ggez/ggez/tree/master/examples).
+You can ofcourse use another library if you want to! Some people prefer [Piston](https://www.piston.rs/) as it has less boilerplate.
 
-Take inspiration from existing chess games or go crazy and make something rustacular!
+Take inspiration from existing chess games or go crazy and write something unorthodox!
+
+### Requirements
+**Must haves**
+* You must be able to play a game of chess
+* You must be able to restart the game
+* The GUI must use someone else's engine
+
+**Nice to haves**
+* Put your own spin on it! Have fun! 
 
 ### Prepare assignment
 
-1) Create a repository named `<KTH_ID>-chess-gui` under the `INDAPlus21` organisation and clone it.
+1) Create a repository named `<KTH_ID>-chess-gui` under the `INDAPlus22` organisation and clone it.
 2) Navigate into your newly created repository and initialise a Rust application crate (like you did the first week).
 
 See the template crate for help with code setup.
@@ -40,6 +50,3 @@ To switch from the uncomplete `chess-template` engine repository as a dependency
 chess_template = { git = "https://github.com/INDAPlus21/chess-template.git" }
 ```
 
-### Grade
-
-To pass this assignment, write a GUI application which allows you to both play and replay chess. The *CATCH* is that you cannot use your own chess engine(!). Therefore, if your chess engine implementation differs from the specifications stated in the `rust-task-3` instructions, write your own API specifications in a README markdown file and push it to your engine repository. 
