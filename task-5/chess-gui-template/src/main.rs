@@ -2,7 +2,8 @@ use chess_template::{Colour, Game, PieceType};
 /**
  * Chess GUI template.
  * Author: Viola Söderlund <violaso@kth.se>
- * Last updated: 2021-10-03
+ * Edited: Isak Larsson <isaklar@kth.se>
+ * Last updated: 2022-09-28
  */
 use ggez::{conf, event, graphics, Context, ContextBuilder, GameError, GameResult};
 use std::{collections::HashMap, env, path};
@@ -25,15 +26,18 @@ const WHITE: graphics::Color =
     graphics::Color::new(188.0 / 255.0, 140.0 / 255.0, 76.0 / 255.0, 1.0);
 
 /// GUI logic and event implementation structure.
+///
 struct AppState {
-    sprites: HashMap<(Colour, PieceType), graphics::Image>,
-    board: [[Option<(Colour, PieceType)>; 8]; 8],
+    sprites: HashMap<(Colour, PieceType), graphics::Image>, // For easy access to the apropriate PNGs
+    board: [[Option<(Colour, PieceType)>; 8]; 8], // Or whatever way you prefer to represent the board
     game: Game, // Save piece positions, which tiles has been clicked, current colour, etc...
 }
 
 impl AppState {
     /// Initialise new application, i.e. initialise new game and load resources.
     fn new(ctx: &mut Context) -> GameResult<AppState> {
+        // A cool way to instantiate the board
+        // You can safely delete this if the chess-library already does this
         let royal_rank = |colour| {
             [
                 Some((colour, PieceType::Rook)),
@@ -66,8 +70,8 @@ impl AppState {
 
         Ok(state)
     }
-    #[rustfmt::skip]
-    /// Loads chess piese images into vector.
+    #[rustfmt::skip] // Skips formatting on this function (not recommended)
+                     /// Loads chess piese images into hashmap, for ease of use.
     fn load_sprites(ctx: &mut Context) -> HashMap<(Colour, PieceType), graphics::Image> {
 
         [
@@ -92,10 +96,11 @@ impl AppState {
     }
 }
 
+// This is where we implement the functions that ggez requires to function
 impl event::EventHandler<GameError> for AppState {
     /// For updating game logic, which front-end doesn't handle.
+    /// It won't be necessary to touch this unless you are implementing something that's not triggered by the user, like a clock
     fn update(&mut self, _ctx: &mut Context) -> GameResult {
-        // Use the chess-library here
         Ok(())
     }
 
