@@ -4,8 +4,11 @@
 
 Great job creating your first ever chess-engine! Now that you are a certified backend-developer, it's time to find out how much you'll like (or dislike) being a front-end developer ;) This weeks task is to create a GUI for a chess-engine.
 
-To write a front-end in Rust, we'll use the [Good Game Easily library (GGEZ)](https://ggez.rs/). For help, you're referred to the [library documentation](https://docs.rs/ggez/0.6.1/ggez/) and to the code repository's [very good examples](https://github.com/ggez/ggez/tree/master/examples).
-You can ofcourse use another library if you want to! Some people prefer [Piston](https://www.piston.rs/) as it has less boilerplate.
+To write a front-end in Rust, you have two choices:
+* The [Good Game Easily library (GGEZ)](https://ggez.rs/). For help, you're referred to the [library documentation](https://docs.rs/ggez/0.6.1/ggez/) and to the code repository's [very good examples](https://github.com/ggez/ggez/tree/master/examples).
+* The modular [Piston](https://www.piston.rs/) library. [Examples](https://github.com/PistonDevelopers/piston-examples/tree/master/examples). [Documentation](https://docs.rs/piston/0.53.1/piston/)
+  
+You can ofcourse use another library if you want to.
 
 Take inspiration from existing chess games or go crazy and write something unorthodox!
 
@@ -39,9 +42,9 @@ Unfortunately, GGEZ and WSL has been proven to be especially tricky. For example
 ContextBuilder::new()./*...*/.modules(conf::ModuleConf::default().audio(false));
 ```
 
-#### Chess GUI template
+#### Chess GUI templates
 
-Navigate in your command prompt/terminal to `./rust-task-5/chess-gui-template`. Run the application to show a chess board with the game state shown in text. 
+Navigate in your command prompt/terminal to `./task-5/chess-gui-templates/<piston/ggez-template>`. Run the application to show a chess board with the game state shown in text. 
 
 The `resources` directory contains image files for all chess pieces, as well as the application icon file. The chess piece image files are loaded into image structures; a gift from me to you. Switch out the image files if you prefer to render the pieces in a different style. 
 
