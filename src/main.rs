@@ -21,7 +21,7 @@ use piston::{Button, MouseButton, MouseCursorEvent, PressEvent};
 
 /// A chess board is 8x8 tiles.
 const GRID_SIZE: i16 = 8;
-/// Sutible size of each tile.
+/// Suitible size of each tile.
 const GRID_CELL_SIZE: (i16, i16) = (90, 90);
 
 /// Size of the application window.
